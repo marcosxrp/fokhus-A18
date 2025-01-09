@@ -1,4 +1,4 @@
 [build]
 command = "ng build"
 functions = "netlify/functions"
-publish = "dist/fokhus/browser"
+publish = "dist/fokhus-a18/browser"
