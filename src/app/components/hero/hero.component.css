@@ -1,0 +1,29 @@
+.animated-span{
+  animation: spin_words 15s infinite;
+}
+@keyframes spin_words{
+  12.5%{
+    transform: translateY(-100%);
+  }
+  25%{
+    transform: translateY(-200%);
+  }
+  37.5%{
+    transform: translateY(-300%);
+  }
+  50%{
+    transform: translateY(-400%);
+  }
+  62.5%{
+    transform: translateY(-500%);
+  }
+  75%{
+    transform: translateY(-600%);
+  }
+  87.5%{
+    transform: translateY(-700%);
+  }
+  100%{
+    transform: translateY(-800%);
+  }
+}

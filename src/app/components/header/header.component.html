@@ -1,0 +1,27 @@
+<header class="w-full fixed top-0 left-0 bg-mainColor z-50">
+  <nav role="navigation"
+  class="py-4 relative">
+      <div class="px-4 flex flex-wrap justify-between items-center max-w-screen-xl mx-auto relative">
+          <a href="#" aria-label="Ir para a página inicial" (click)="navState() == 'open' ? toggleNav() : '' "><img src="assets/logo-svg.svg" alt="logotipo da empresa fokhus" class="w-28"></a>
+
+          <button (click)="toggleNav()"
+          class="sm:hidden active:scale-150 duration-200 transition-all ease-linear place-center z-50">
+              <img src="assets/menu-svg.svg" alt="icone para abrir o menu de navegação" class="w-10">
+          </button>
+
+          <div  [@slideNav]="isLgScreen() ? 'static' : navState()"
+          class="bg-mainColor sm:bg-transparent px-4 sm:px-0 rounded-b-2xl w-full sm:w-auto sm:flex sm:mt-0 absolute top-16 left-0 sm:static sm:top-0 sm:opacity-1 z-40">
+              <ul class="flex flex-col sm:flex-row gap-3 sm:space-x-4 font-roboto_mono font-bold text-xl">
+                <li (click)="toggleNav()"
+                class="pt-4 sm:py-0 z-50"><a href="#projects" aria-label="Ir para a página projetos">projetos</a></li>
+                <li (click)="toggleNav()"
+                class="pt-4 sm:py-0 z-50"><a href="#services" aria-label="Ir para a página de serviços">serviços</a></li>
+                <li (click)="toggleNav()"
+                class="pt-4 sm:py-0 z-50"><a href="#about-us" aria-label="Ir para a página sobre nós">quem somos</a></li>
+                <li (click)="toggleNav()"
+                class="pt-4 sm:py-0 pb-6 sm:pb-0 z-50"><a href="#contact" aria-label="Ir para a página de contato">contato</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header>
